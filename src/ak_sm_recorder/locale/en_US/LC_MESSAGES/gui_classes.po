@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-12 14:38+0200\n"
+"PO-Revision-Date: 2022-04-12 15:05+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: gui_classes/gui_classes.py:38
+msgid "Remote camera console"
+msgstr "Remote camera console"
+
+#: gui_classes/gui_classes.py:56
+msgid "Remote commands"
+msgstr "Remote commands"
+
+#: gui_classes/gui_classes.py:59
+msgid "Enable remote clients"
+msgstr "Enable remote clients"
+
+#: gui_classes/gui_classes.py:63
+msgid "Start record"
+msgstr "Start record"
+
+#: gui_classes/gui_classes.py:66
+msgid "Stop record"
+msgstr "Stop record"
+
+#: gui_classes/gui_classes.py:69
+msgid "Take capture"
+msgstr "Take capture"
+
+#: gui_classes/gui_classes.py:72
+msgid "Shutdown remote clients"
+msgstr "Shutdown remote clients"
+
+#: gui_classes/gui_classes.py:76
+msgid "Info"
+msgstr "Info"
+
+#: gui_classes/gui_classes.py:79
+msgid "Messages:"
+msgstr "Messages:"
+
+#: gui_classes/gui_classes.py:85
+msgid "Quit"
+msgstr "Quit"
+
+#: gui_classes/gui_classes.py:98
+msgid "About..."
+msgstr "About..."
+
+#: gui_classes/gui_classes.py:99
+msgid "About"
+msgstr "About"
+
+#: gui_classes/gui_classes.py:139
+msgid "Not implemented yet!!!"
+msgstr "Not implemented yet!!!"
+
+#: gui_classes/gui_classes.py:144
+msgid "Enabling remote clients"
+msgstr "Enabling remote clients"
+
+#: gui_classes/gui_classes.py:149
+msgid "Enable recording"
+msgstr "Enable recording"
+
+#: gui_classes/gui_classes.py:154
+msgid "Stop recording"
+msgstr "Stop recording"
+
+#: gui_classes/gui_classes.py:159 gui_classes/gui_classes.py:160
+msgid "Taking capture"
+msgstr "Taking capture"
+
+#: gui_classes/gui_classes.py:163
+msgid "A capture was launch!!\n"
+msgstr "A capture was launch!!\n"
+
+#: gui_classes/gui_classes.py:166
+msgid "Capture time finished\n"
+msgstr "Capture time finished\n"
+
+#: gui_classes/gui_classes.py:172
+msgid "Shutting down remote clients"
+msgstr "Shutting down remote clients"
