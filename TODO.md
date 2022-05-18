@@ -6,6 +6,10 @@
 * Add tests for camera_classes
 * Add tests for camera_classes
 * Add tests for KA_manager2.py
+* Add header to each file
+
+## Documentation
+* Creates user manual.
 
 ## GUI Interface
 * Make a GUI interface to supplant text interface
@@ -28,7 +32,7 @@
 ## Configuration and settings
 * Make selection of folder to save data.
 * Save data in config file.
-* Add folder to save videos.
+* Add selector folder to save videos.
 
 ## Package systems
 ~~* Add package PIP creation~~

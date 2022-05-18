@@ -13,11 +13,10 @@ from gui_frame_ext.about_window import AboutWindow
 """
 import os
 import tkinter as tk
-#from src.gui_single_mode_bad.gui_frame_ext_config import GUIFrameExtractorConfig2
 
 
 class AboutWindow2(tk.Toplevel):
-    title_str = 'KA Single Mode'
+    title_str = 'AK SM Recorder'
     version_number_str = '1.0'
 
     def __init__(self, parent):
@@ -58,5 +57,5 @@ class AboutWindow2(tk.Toplevel):
         img_label['image'] = img_label.image
         img_label.pack()
 
-        buttonClose = tk.Button(self, text='Close', command=self.destroy)
-        buttonClose.pack(expand=True)
+        button_close = tk.Button(self, text='Close', command=self.destroy)
+        button_close.pack(expand=True)

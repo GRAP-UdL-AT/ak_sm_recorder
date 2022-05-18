@@ -32,3 +32,4 @@ deprecated/main_webcam_1.py
 deprecated/ui_manager_menu.py
 deprecated/gui_single_mode_bad/gui_frame_ext_console.py
 deprecated/ui_thread_menu.py
+*.pyc

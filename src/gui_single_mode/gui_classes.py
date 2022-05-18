@@ -15,7 +15,7 @@ import os
 import datetime
 import time
 import tkinter as tk
-from tkinter import *
+#from tkinter import *
 from tkinter import ttk
 
 import helpers.helper_load_config as hc
