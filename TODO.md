@@ -20,7 +20,7 @@
 * Add a GUI to configure mode of camera
 * Add scheduled captures
 * Improve translation
-* Add restriction to configure as BGRSA mode to capture 3d point clouds
+* Add restriction to configure as BGRA mode to capture 3d point clouds
 
 ## Manage devices
 * Add error checking if camera is not connected
