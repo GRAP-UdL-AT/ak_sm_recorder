@@ -24,6 +24,7 @@ from pyk4a import FPS, WiredSyncMode
 
 from gui_single_mode.about_window import AboutWindow2
 from camera_classes.job_thread_azure import JobThreadAzure
+from camera_classes.job_thread_3d_azure import JobThread3DAzure
 from camera_classes.KA_manager2 import KAManager2
 
 
@@ -612,12 +613,12 @@ class GUIKASingleMode(tk.Tk):
         self.start_record_button["state"] = "disabled"
         self.stop_record_button["state"] = "active"
         print("Taking a capture!")
-        self.job_ka_camera = JobThreadAzure(self.my_device_configuration, self.path_video_output)
-        self.job_ka_camera.start()
+        self.job_ak_camera = JobThreadAzure(self.my_device_configuration, self.path_video_output)
+        self.job_ak_camera.start()
         print('Waiting seconds and recording data--> ')
         time.sleep(4)  # todo: put this in config
-        self.job_ka_camera.shutdown_flag.set()
-        self.job_ka_camera.join()
+        self.job_ak_camera.shutdown_flag.set()
+        self.job_ak_camera.join()
         print('Video saved in --> ', self.path_video_output)
         self.ui_buttons_enable_all()
         pass
@@ -628,14 +629,14 @@ class GUIKASingleMode(tk.Tk):
         self.show_real_time_button["state"] = "disabled"
         self.start_record_button["state"] = "disabled"
         self.stop_record_button["state"] = "active"
-        print("Taking a capture!")
-        self.job_ka_camera = JobThreadAzure(self.my_device_configuration, self.path_video_output)
-        self.job_ka_camera.start()
+        print("Taking a 3d cloud point capture!")
+        self.job_ak_3d_camera = JobThread3DAzure(self.my_device_configuration, self.path_video_output)
+        self.job_ak_3d_camera.start()
         print('Waiting seconds and recording data--> ')
-        time.sleep(4)  # todo: put this in config
-        self.job_ka_camera.shutdown_flag.set()
-        self.job_ka_camera.join()
-        print('Video saved in --> ', self.path_video_output)
+        time.sleep(1)  # todo: put this in config
+        self.job_ak_3d_camera.shutdown_flag.set()
+        self.job_ak_3d_camera.join()
+        print('3d point cloud saved in --> ', self.path_video_output)
         self.ui_buttons_enable_all()
         pass
 
@@ -658,14 +659,14 @@ class GUIKASingleMode(tk.Tk):
         self.messages_info.insert("end", "Enable recording" + "\n")
         self.ui_buttons_enable_record()
         # self.my_device_configuration.color_format = ImageFormat.COLOR_MJPG
-        self.job_ka_camera = JobThreadAzure(self.my_device_configuration, self.path_video_output)
-        self.job_ka_camera.start()
+        self.job_ak_camera = JobThreadAzure(self.my_device_configuration, self.path_video_output)
+        self.job_ak_camera.start()
 
     def stop_record(self):
         self.messages_info.insert("end", "Stop recording" + "\n")
         self.ui_buttons_stop_record()
-        self.job_ka_camera.shutdown_flag.set()
-        self.job_ka_camera.join()
+        self.job_ak_camera.shutdown_flag.set()
+        self.job_ak_camera.join()
 
     def take_capture(self):
         self.messages_info.insert("end", "Taking capture" + "\n")

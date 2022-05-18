@@ -192,7 +192,7 @@ class KAManager2:
         self.finalize_sensor()
 
     def show_a_capture(self):
-        # todo: a problem with configuratoni mode in BGRA, may be variable assignment
+        # todo: a problem with configuration mode in BGRA, may be variable assignment
         self.initialize_sensor()
         temporal = self.device_config.color_format
         self.device_config.color_format = ImageFormat.COLOR_BGRA32

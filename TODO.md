@@ -5,6 +5,7 @@
 * Organise folders
 * Add tests for camera_classes
 * Add tests for camera_classes
+* Add tests for KA_manager2.py
 
 ## GUI Interface
 * Make a GUI interface to supplant text interface
@@ -19,6 +20,7 @@
 * Add a GUI to configure mode of camera
 * Add scheduled captures
 * Improve translation
+* Add restriction to configure as BGRSA mode to capture 3d point clouds
 
 ## Manage devices
 * Add error checking if camera is not connected

@@ -3,9 +3,9 @@ Project: Kinect Azure management
 Author: Juan Carlos Miranda
 Date: August 2021
 Description:
-This is an wraper to use Azure Kinect functions as a thread process
+This is an wrapper to use Azure Kinect functions 3D point clouds as a thread process
 This class is used when we need to launch process  from loops as
-a remote client
+a remote client or buttons
 
 Use:
 """
@@ -13,16 +13,14 @@ Use:
 import threading
 import logging
 import os
-import helpers.helper_path as hp
-# hp.kinect()
 import pyk4a
 import numpy as np
-from pyk4a import Config, PyK4A, PyK4ARecord
+from pyk4a import Config, PyK4A
 from pyk4a import ColorResolution, ImageFormat, DepthMode, FPS
 from datetime import datetime
 
 
-class JobThreadAzure(threading.Thread):
+class JobThread3DAzure(threading.Thread):
     # Kinect device
     _device = None
     _capture = None
@@ -101,7 +99,7 @@ class JobThreadAzure(threading.Thread):
 
         now = datetime.now()
         date_string = now.strftime("%d%m%Y%H%M%S")
-        f_extension = ".mkv"
+        f_extension = ".xyz"
         f_name = resolutionp + "_" + date_string + f_extension
         f_path_name = os.path.join(self._f_path, f_name)
         logging.info(f"CREATING_FILE {f_path_name}")
@@ -109,30 +107,37 @@ class JobThreadAzure(threading.Thread):
         return f_path_name
 
     def run(self):
+        """
+        Adapted from example https://github.com/etiennedub/pyk4a/blob/master/example/viewer_point_cloud.py
+        :return:
+        """
         # open sensor
         self.initialize_sensor()
-        print("Recording data")
+        print("Capturing 3D data")
         f_path_name = self.get_file_name()
-        print("Recording... Creating file.")
-        record = PyK4ARecord(device=self._device, config=self.device_config, path=f_path_name)
-        record.create()
-        #####################
-        # RECORD loop
-        #####################
-        try:
-            print('RECORDING-STARTED #%s' % self.ident)
-            logging.info(f'RECORDING-STARTED #{self.ident}')
-            while not self.shutdown_flag.is_set():
-                self._capture = self._device.get_capture()
-                record.write_capture(self._capture)
-        except Exception:
-            print("An exception occurred")
-        #####################
-        record.flush()
-        record.close()
-        print(f"{record.captures_count} frames written.")
+        print("Capturing 3D data... Creating file.")
+        # ------------------------------------------------
+        # getters and setters directly get and set on device
+        self._device.whitebalance = 4500
+        assert self._device.whitebalance == 4500
+        self._device.whitebalance = 4510
+        assert self._device.whitebalance == 4510
+        while True:
+            capture = self._device.get_capture()
+            if np.any(capture.depth) and np.any(capture.color):
+                break
+        while True:
+            capture = self._device.get_capture()
+            if np.any(capture.depth) and np.any(capture.color):
+                break
+        points_data = capture.depth_point_cloud.reshape((-1, 3))
+        color_data = capture.transformed_color[..., (2, 1, 0)].reshape((-1, 3))
+        point_cloud_3d = np.append(points_data, color_data, axis=1)
+        np.savetxt(f_path_name, point_cloud_3d, delimiter=' ', fmt='%u')
+        # ------------------------------------------------
+        # print(f"{record.captures_count} frames written.")
         # ... Clean shutdown code here ...
-        print(f'RECORDING-STOPPED #{self.ident}')
-        logging.info(f'RECORDING-STOPPED #{self.ident}')
+        print(f'3D CAPTURING-STOPPED #{self.ident}')
+        # logging.info(f'RECORDING-STOPPED #{self.ident}')
         # close sensor sensor
         self.finalize_sensor()

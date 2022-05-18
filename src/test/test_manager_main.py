@@ -10,11 +10,10 @@ Use:
 import logging
 import os
 import cv2 as cv
-import src.helpers.helper_path as hp
-hp.kinect()
+import helpers.helper_path as hp
 from pyk4a import ImageFormat
-from src.camera_classes.KA_manager2 import KAManager2
-import src.helpers.helper_load_config as hc
+from camera_classes.KA_manager2 import KAManager2
+import helpers.helper_load_config as hc
 from time import gmtime
 
 if __name__ == '__main__':
