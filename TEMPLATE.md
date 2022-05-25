@@ -1,7 +1,7 @@
 # AK_SM_RECORDER
 A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode.
 
-![SOFTWARE_PRESENTATION]((https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorded_presentation.png?raw=true))
+![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorded_presentation.png?raw=true)
 
 ## Contents
 * Pre-requisites.
