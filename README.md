@@ -25,9 +25,12 @@ The functionalities of the software are briefly described.
 * Videos and 3D cloud points can be retrieved from **"RECORDER_VIDEOS/"** folder.
 
 
-## Run SOFTWARE_TITLE
+## Run AK_SM_RECORDER
 ## Install
-LOREM IPSUM
+```
+python ak_sm_recorder_main.py
+```
+
 
 ### Windows (TODO)
 Copy folder FOLDER_HERE and execute "FILENAME_EXE.EXE".
@@ -53,8 +56,7 @@ Folder description:
 |---------------------------|-------------------------|
 | docs/ | Documentation |
 | src/ | Source code |
-| win_exe_conf/ | Specifications for build .exe files with Pyinstaller |
-|  | Desktop GUI based on Tkinter library. Offers the possibility of sending instructions to the remote devices.                                                                                                     |
+| win_exe_conf/ | Specifications for building .exe files with Pyinstaller.|
 | . | . |
   
 
@@ -67,10 +69,10 @@ Files description:
 | recording.bat | Executing main script | WIN |
 | build_pip.bat | Build PIP package to distribution | WIN |
 | build_win.bat | Build .EXE for distribution | WIN |
-| /src/ak_sm_recorder/__main__.py | Main function used in package compilation | |
-| /ak_sm_recorder_main.py | Main function | |
-| setup.cfg | Package configuration PIP| |
-| pyproject.toml | Package description pip| |
+| /src/ak_sm_recorder/__main__.py | Main function used in package compilation | Supported by Python |
+| /ak_sm_recorder_main.py | Main function | Supported by Python |
+| setup.cfg | Package configuration PIP| Supported by Python |
+| pyproject.toml | Package description pip| Supported by Python |
 | . | . | . |
 
 
