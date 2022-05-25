@@ -111,7 +111,7 @@ pip install pyk4a --no-use-pep517 --global-option=build_ext --global-option="-IC
 ```
 
 ### Running software
-Lorem ipsum
+TODO_ADD_HERE_TEXT
 
 
 ## Authorship
@@ -120,4 +120,4 @@ bugs juancarlos.miranda@udl.cat
 
 ## Citation
 If you find this code useful, please consider citing:
-[GRAP-UdL-AT/ak_frame_extractor](https://github.com/GRAP-UdL-AT/ak_sm_recorder/).
+[GRAP-UdL-AT/ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/).
