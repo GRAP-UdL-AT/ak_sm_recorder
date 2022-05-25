@@ -1,12 +1,16 @@
 """
-Project:
-Author:
-Date:
+Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/ak_sm_recorder
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
+Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
+Date: August 2021
 Description:
-...
 
 Use:
 """
+
 import configparser
 from pyk4a import Config, ColorResolution, ImageFormat, DepthMode
 from pyk4a import FPS, WiredSyncMode

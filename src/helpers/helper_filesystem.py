@@ -1,13 +1,16 @@
 """
-Project: Packaging Tutorial
+Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/ak_sm_recorder
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: April 2022
 Description:
 
-
 Use:
-
 """
+
 import os
 import shutil
 

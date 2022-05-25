@@ -5,11 +5,13 @@ Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/
 * GRAP http://www.grap.udl.cat/
 
 Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
-Date: April 2022
+Date: August 2021
 Description:
-
+    Remote Management Console, this sends commands to the central server. It offers a basic interface
+    to manage the acquisition system.
 Use:
-    python __main__.py
+
+    python ak_sm_recorder.py
 """
 
 # import locale

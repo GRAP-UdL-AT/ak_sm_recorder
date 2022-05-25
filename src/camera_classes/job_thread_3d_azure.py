@@ -1,7 +1,21 @@
 """
+Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/ak_sm_recorder
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
+Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
+Date: April 2022
+Description:
+    This is an wrapper to use Azure Kinect functions 3D point clouds as a thread process.
+    This class is used when we need to launch process  from buttons
+Use:
+"""
+
+"""
 Project: Kinect Azure management
 Author: Juan Carlos Miranda
-Date: August 2021
+Date: April 2022
 Description:
 This is an wrapper to use Azure Kinect functions 3D point clouds as a thread process
 This class is used when we need to launch process  from loops as

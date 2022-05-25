@@ -1,24 +1,30 @@
 """
-Project:
-Author: Juan Carlos Miranda
-Date:
+Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/ak_sm_recorder
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
+Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
+Date: August 2021
 Description: Manager of Azure Kinect Sensor
-This is an examples adapted from:
- * https://github.com/UnaNancyOwen/AzureKinectSample/blob/master/sample/python/color.py
- * https://github.com/etiennedub/pyk4a/blob/master/example/
+    This is an examples adapted from:
+    * https://github.com/UnaNancyOwen/AzureKinectSample/blob/master/sample/python/color.py
+    * https://github.com/etiennedub/pyk4a/blob/master/example/
 
 This is a first approach based on examples from the above urls adn modified from KA_manager1.py
 This has simplified methods and it is used in
 stand alone recording app.
 
-
-  Configure sensor
-  Take a capture with all cameras
-  Show each camera results
-  Show config data of one sensor
+  * Configure sensor
+  * Take a capture with all cameras
+  * Show each camera results
+  * Show config data of one sensor
 # todo: add descriptions
+
 Use:
+
 """
+
 import numpy as np
 import cv2 as cv
 import logging
@@ -85,7 +91,7 @@ class KAManager2:
     def finalize_sensor(self):
         logging.debug("finalize_sensor()")
         self.my_device.stop()
-        #self.my_device.close()
+        # self.my_device.close()
         pass
 
     def get_file_name(self):

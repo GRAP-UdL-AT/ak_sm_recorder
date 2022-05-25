@@ -3,14 +3,13 @@
 ## AK_SM_RECORDER functionalities
 * Take captures and save it in Matroska format.
 * Record videos.
-* Seting configuration options for device.
+* Setting configuration options for device.
 * Capture data as 3D point cloud.
 
 
 
 This directory contains examples and methods related to the use of Kinect Azure and own 
 experiments and settings with this device.
-
 Some examples are adapted from Pyk4a oficial site
 
 ## Kinect Azure camera pre-requisites

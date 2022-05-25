@@ -1,14 +1,19 @@
 """
-Project: Kinect Azure management
-Author: Juan Carlos Miranda
+Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/ak_sm_recorder
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
+Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: August 2021
 Description:
-This is an wraper to use Azure Kinect functions as a thread process
-This class is used when we need to launch process  from loops as
-a remote client
+    This is an wraper to use Azure Kinect functions as a thread process
+    This class is used when we need to launch process  from buttons
 
 Use:
+
 """
+
 
 import threading
 import logging

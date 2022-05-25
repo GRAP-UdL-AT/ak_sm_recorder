@@ -1,12 +1,17 @@
 """
-Project:
-Author: Juan Carlos Miranda
+Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/ak_sm_recorder
+
+* PAgFRUIT http://www.pagfruit.udl.cat/en/
+* GRAP http://www.grap.udl.cat/
+
+Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 Date: July 2021
 Description:
- Example showing real time data obtained from Azure Kinect
+ Example testing configuration data
 
 Use:
 """
+
 import logging
 import os
 import cv2 as cv

@@ -1,4 +1,11 @@
 @echo off
+REM HEADER FOR WINDOW SYSTEMS
+REM Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/ak_sm_recorder
+REM
+REM  * PAgFRUIT http://www.pagfruit.udl.cat/en/
+REM  * GRAP http://www.grap.udl.cat/
+REM
+REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 
 rem This file is UTF-8 encoded, so we need to update the current code page while executing it
 for /f "tokens=2 delims=:." %%a in ('"%SystemRoot%\System32\chcp.com"') do (

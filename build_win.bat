@@ -1,4 +1,12 @@
 @ echo off
+REM HEADER FOR WINDOW SYSTEMS
+REM Project: AK_SM_RECORDER Azure Kinect SM Recorder https://github.com/GRAP-UdL-AT/ak_sm_recorder
+REM
+REM  * PAgFRUIT http://www.pagfruit.udl.cat/en/
+REM  * GRAP http://www.grap.udl.cat/
+REM
+REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
+
 SET APPLICATION_FOLDER_MAIN=ak_sm_recorder
 SET APPLICATION_FOLDER_OUT=ak_sm_recorder_f
 SET GUI_PATH=gui_single_mode

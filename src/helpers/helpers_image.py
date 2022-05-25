@@ -1,3 +1,11 @@
+"""
+Project:
+Author:
+Date:
+Description:
+    Taken from https://github.com/etiennedub/pyk4a/
+Use:
+"""
 from typing import Optional, Tuple
 
 import cv2
