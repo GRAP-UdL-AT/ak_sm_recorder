@@ -19,9 +19,15 @@ Use:
 # import os
 # import logging
 # import helpers.helper_load_config as hc
+import os
+from os.path import expanduser
+import sys
+sys.path.append(os.path.join(os.path.abspath('.'), 'src'))
+
+
+
 from gui_single_mode.gui_ak_single_config import GUIKASingleModeConfig
 from gui_single_mode.gui_classes import GUIKASingleMode
-from os.path import expanduser
 from helpers.helper_filesystem import *
 
 if __name__ == '__main__':

@@ -6,7 +6,10 @@ A simple GUI recorder based on Python to manage Azure Kinect camera devices in a
 ## Contents
 * Pre-requisites
 * Functionalities
-* Content 3
+* Run
+* Files and folder description
+* Development tools and environment
+
 
 ## Pre-requisites
 * Azure Kinect DK camera connected to the computer. Specifications can be seen in the [manufacturer site](https://docs.microsoft.com/es-es/azure/kinect-dk/hardware-specification).
@@ -66,11 +69,11 @@ Files description:
 |---------------------------|-------------------------|---|
 | activate.bat | Activate environments in Windows | WIN |
 | clean_files.bat | Clean files under CMD. | WIN |
-| recording.bat | Executing main script | WIN |
+| ak_sm_recorder_main.bat | Executing main script | WIN |
 | build_pip.bat | Build PIP package to distribution | WIN |
 | build_win.bat | Build .EXE for distribution | WIN |
 | /src/ak_sm_recorder/__main__.py | Main function used in package compilation | Supported by Python |
-| /ak_sm_recorder_main.py | Main function | Supported by Python |
+| /ak_sm_recorder_main.py | Python main function | Supported by Python |
 | setup.cfg | Package configuration PIP| Supported by Python |
 | pyproject.toml | Package description pip| Supported by Python |
 | . | . | . |
