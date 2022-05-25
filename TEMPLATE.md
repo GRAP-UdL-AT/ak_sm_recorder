@@ -1,5 +1,5 @@
 # AK_SM_RECORDER
-A simple GUI recorder based on Python to manage Azure Kinect camera devices in standalone mode.
+A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode.
 
 Lorem ipsum
 
@@ -8,7 +8,6 @@ Lorem ipsum
 * Content 2.
 * Content 3.
 
-Here some developments.
 ## Software pre-requisites
 * Azure Kinect DK camera connected to the computer. Specifications can be seen in the [manufacturer site](https://docs.microsoft.com/es-es/azure/kinect-dk/hardware-specification)
 * [SDK Azure Kinect](https://docs.microsoft.com/es-es/azure/kinect-dk/set-up-azure-kinect-dk) installed.
@@ -29,21 +28,23 @@ The functionalities of the software are briefly described.
 
 ### Configuration tab
 * **Save config** Enables to the user to configure Azure Kinect devices parameters.
+
 ![CONFIGURATION_TAB_2](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorder_2.png?raw=true)
 
 ## Retrieving stored data
 Videos and 3D cloud points can be retrieved from:
+
 ![SCHEMA_RETRIEVING_DATA](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/diagram_features_1.png?raw=true)
 
 ## Install
-lOREM IPSUM
+LOREM IPSUM
 
 
 ## Run SOFTWARE_TITLE
-### Windows
+### Windows (TODO)
 Copy folder FOLDER_HERE and execute "FILENAME_EXE.EXE".
 
-### Linux
+### Linux (TODO)
 ..
 
 
