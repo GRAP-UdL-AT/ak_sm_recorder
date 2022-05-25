@@ -11,3 +11,9 @@
 *.pyc
 *.pyc
 *.pyc
+*.pyc
+*.pyc
+src/helpers/__pycache__/helper_path.cpython-38.pyc
+src/helpers/__pycache__/helper_path.cpython-38.pyc
+*.pyc
+src/helpers/__pycache__/helper_filesystem.cpython-38.pyc
