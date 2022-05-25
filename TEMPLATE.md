@@ -1,20 +1,20 @@
 # AK_SM_RECORDER
 A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode.
 
-Lorem ipsum
+![SOFTWARE_PRESENTATION]((https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorded_presentation.png?raw=true))
 
 ## Contents
-* Content 1.
-* Content 2.
+* Pre-requisites.
+* Functionalities
 * Content 3.
 
-## Software pre-requisites
-* Azure Kinect DK camera connected to the computer. Specifications can be seen in the [manufacturer site](https://docs.microsoft.com/es-es/azure/kinect-dk/hardware-specification)
+## Pre-requisites
+* Azure Kinect DK camera connected to the computer. Specifications can be seen in the [manufacturer site](https://docs.microsoft.com/es-es/azure/kinect-dk/hardware-specification).
 * [SDK Azure Kinect](https://docs.microsoft.com/es-es/azure/kinect-dk/set-up-azure-kinect-dk) installed.
-* [pyk4a library](https://pypi.org/project/pyk4a/) installed. If the operating system is Windows, follow this [steps](https://github.com/etiennedub/pyk4a/).  You can find test basic examples with pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example)
+* [pyk4a library](https://pypi.org/project/pyk4a/) installed. If the operating system is Windows, follow this [steps](https://github.com/etiennedub/pyk4a/).  You can find test basic examples with pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
 
 
-## Software functionalities
+## Functionalities
 The functionalities of the software are briefly described.
 
 ### Camera tab
@@ -48,7 +48,7 @@ Copy folder FOLDER_HERE and execute "FILENAME_EXE.EXE".
 ..
 
 
-## Package distribution
+## Package distribution format
 
 Explain about packages distribution. 
 
@@ -82,7 +82,7 @@ Here some developments.
 
 You can use the __main__.py for execute as first time in src/ak_frame_extractor/_ _ main _ _.py
 Configure the path of the project, if you use Pycharm, put your folder root like this:
-![alt text](https://github.com/GRAP-UdL-AT/ak_frame_extractor/blob/main/img/configuration_pycharm.png?raw=true)
+![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/img/configuration_pycharm.png?raw=true)
 
 ### Installing steps Linux (TODO)
 Lorem ipsum
@@ -95,11 +95,9 @@ Lorem ipsum
 
 
 ## Authorship
-
 This project is contributed by [GRAP-UdL-AT](http://www.grap.udl.cat/en/index.html). Please contact authors to report
 bugs juancarlos.miranda@udl.cat
 
 ## Citation
-
 If you find this code useful, please consider citing:
-[GRAP-UdL-AT/ak_frame_extractor](https://github.com/GRAP-UdL-AT/ak_frame_extractor/).
+[GRAP-UdL-AT/ak_frame_extractor](https://github.com/GRAP-UdL-AT/ak_sm_recorder/).
