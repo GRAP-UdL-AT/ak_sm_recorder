@@ -4,9 +4,9 @@ A simple GUI recorder based on Python to manage Azure Kinect camera devices in a
 ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorded_presentation.png?raw=true)
 
 ## Contents
-* Pre-requisites.
+* Pre-requisites
 * Functionalities
-* Content 3.
+* Content 3
 
 ## Pre-requisites
 * Azure Kinect DK camera connected to the computer. Specifications can be seen in the [manufacturer site](https://docs.microsoft.com/es-es/azure/kinect-dk/hardware-specification).
@@ -16,31 +16,19 @@ A simple GUI recorder based on Python to manage Azure Kinect camera devices in a
 
 ## Functionalities
 The functionalities of the software are briefly described.
-
-### Camera tab
-* **Show real time** Display images of the device in real time. Used to see where the camera is pointing.
-* **Start record** Start a video recording.
-* **Stop record** Stops a video recording in progress.
-* **Take screenshots** Take screenshots and save them in Matroska format as short videos.
-* **Take 3D point cloud capture** Take the captures as 3D point cloud data and save them in .XYZ format.
-
-![CONFIGURATION_TAB_1](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorder_1.png?raw=true)
-
-### Configuration tab
-* **Save config** Enables to the user to configure Azure Kinect devices parameters.
-
-![CONFIGURATION_TAB_2](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorder_2.png?raw=true)
-
-## Retrieving stored data
-Videos and 3D cloud points can be retrieved from:
-
-![SCHEMA_RETRIEVING_DATA](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/diagram_features_1.png?raw=true)
-
-## Install
-LOREM IPSUM
+* **[Show real time]** Display images of the device in real time. Used to see where the camera is pointing.
+* **[Start record]** Start a video recording.
+* **[Stop record]** Stops a video recording in progress.
+* **[Take screenshots]** Take screenshots and save them in Matroska format as short videos.
+* **[Take 3D point cloud capture]** Take the captures as 3D point cloud data and save them in .XYZ format.
+* **[Save config]** Enables to the user to configure Azure Kinect devices parameters.
+* Videos and 3D cloud points can be retrieved from **"RECORDER_VIDEOS/"** folder.
 
 
 ## Run SOFTWARE_TITLE
+## Install
+LOREM IPSUM
+
 ### Windows (TODO)
 Copy folder FOLDER_HERE and execute "FILENAME_EXE.EXE".
 
@@ -49,7 +37,6 @@ Copy folder FOLDER_HERE and execute "FILENAME_EXE.EXE".
 
 
 ## Package distribution format
-
 Explain about packages distribution. 
 
 | Package type | Package |  Url |  Description | 
@@ -59,36 +46,64 @@ Explain about packages distribution.
 | PIP          | .whl    | .whl | PIP packages are stored in build/ | 
 | . | . | . |
 
-## Files in directory
+## Files and folder description
+Folder description:
 
-| Folder                    | Description                                                                                                                                                                                                     |
-|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Folders                    | Description            |
+|---------------------------|-------------------------|
 | docs/ | Documentation |
 | src/ | Source code |
 | win_exe_conf/ | Specifications for build .exe files with Pyinstaller |
 |  | Desktop GUI based on Tkinter library. Offers the possibility of sending instructions to the remote devices.                                                                                                     |
-| server_rest_api           | The server acts as an intermediary in the management of messages between remote clients and the managemen console, and stores information about of the instructions sent and received. It uses SQLite database. |
-| .                         | .  
+| . | . |
+  
+
+Files description:
+
+| Files                    | Description              | OS |
+|---------------------------|-------------------------|---|
+| activate.bat | Activate environments in Windows | WIN |
+| clean_files.bat | Clean files under CMD. | WIN |
+| recording.bat | Executing main script | WIN |
+| build_pip.bat | Build PIP package to distribution | WIN |
+| build_win.bat | Build .EXE for distribution | WIN |
+| /src/ak_sm_recorder/__main__.py | Main function used in package compilation | |
+| /ak_sm_recorder_main.py | Main function | |
+| setup.cfg | Package configuration PIP| |
+| pyproject.toml | Package description pip| |
+| . | . | . |
+
 
 ## Development tools and environment
+* [Pyinstaller](https://pyinstaller.org).
+* [Opencv](https://opencv.org/).
+* [Curses for Python](https://docs.python.org/3/howto/curses.html) ```pip install windows-curses```.
 
-* Development tool 1.
-* Development tool 2.
-* Development tool 3.
 
-Here some developments.
-
-## Notes for developers
-
+### Notes for developers
 You can use the __main__.py for execute as first time in src/ak_frame_extractor/_ _ main _ _.py
 Configure the path of the project, if you use Pycharm, put your folder root like this:
 ![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/img/configuration_pycharm.png?raw=true)
 
-### Installing steps Linux (TODO)
-Lorem ipsum
+### Creating virtual environment Linux (TODO)
+```
+python3 -m venv ./venv
+source ./venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements_linux.txt
+```
 
-### Installing steps Windows (TODO)
-Lorem ipsum
+### Creating virtual environment  Windows (TODO)
+```
+%userprofile%"\AppData\Local\Programs\Python\Python38\python.exe" -m venv ./venv
+venv\Scripts\activate.bat
+pip install --upgrade pip
+pip install -r requirements_win.txt
+```
+** If there are some problems in Windows, follow [this](https://github.com/etiennedub/pyk4a/) **
+```
+pip install pyk4a --no-use-pep517 --global-option=build_ext --global-option="-IC:\Program Files\Azure Kinect SDK v1.4.1\sdk\include" --global-option="-LC:\Program Files\Azure Kinect SDK v1.4.1\sdk\windows-desktop\amd64\release\lib"
+```
 
 ### Running software
 Lorem ipsum

@@ -32,4 +32,4 @@ if defined _OLD_CODEPAGE (
     set _OLD_CODEPAGE=
 )
 
-python KA__recording_manager_main.py
+python ak_sm_recorder_manager_main.py

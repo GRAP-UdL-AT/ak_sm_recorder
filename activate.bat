@@ -15,7 +15,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=%HOMEDRIVE%%HOMEPATH%\development\ka_single_mode
+set VIRTUAL_ENV=%HOMEDRIVE%%HOMEPATH%\development\ak_sm_recorder_venv
 
 if not defined PROMPT set PROMPT=$P$G
 
