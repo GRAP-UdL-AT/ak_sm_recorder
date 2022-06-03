@@ -75,7 +75,7 @@ Folder description:
 |---------------------------|-------------------------|
 | docs/ | Documentation |
 | src/ | Source code |
-| win_exe_conf/ | Specifications for building .exe files with Pyinstaller.|
+| win_exe_conf/ | Specifications for building .exe files with [Pyinstaller](https://pyinstaller.org).|
 | . | . |
 
 Files description:
