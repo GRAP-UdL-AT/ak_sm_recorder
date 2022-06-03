@@ -1,24 +1,33 @@
 # AK_SM_RECORDER
+
 A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode.
 
 ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorded_presentation.png?raw=true)
 
 ## Contents
-* Pre-requisites
-* Functionalities
-* Run
-* Files and folder description
-* Development tools and environment
 
+1. Pre-requisites.
+2. Functionalities.
+3. Install and run.
+4. Files and folder description.
+5. Development tools, environment, build executables.t
 
-## Pre-requisites
-* Azure Kinect DK camera connected to the computer. Specifications can be seen in the [manufacturer site](https://docs.microsoft.com/es-es/azure/kinect-dk/hardware-specification).
+## 1. Pre-requisites
+
+* Azure Kinect DK camera connected to the computer. Specifications can be seen in
+  the [manufacturer site](https://docs.microsoft.com/es-es/azure/kinect-dk/hardware-specification).
 * [SDK Azure Kinect](https://docs.microsoft.com/es-es/azure/kinect-dk/set-up-azure-kinect-dk) installed.
-* [pyk4a library](https://pypi.org/project/pyk4a/) installed. If the operating system is Windows, follow this [steps](https://github.com/etiennedub/pyk4a/).  You can find test basic examples with pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
+* [pyk4a library](https://pypi.org/project/pyk4a/) installed. If the operating system is Windows, follow
+  this [steps](https://github.com/etiennedub/pyk4a/). You can find test basic examples with
+  pyk4a [here](https://github.com/etiennedub/pyk4a/tree/master/example).
+* In Ubuntu 20.04, we provide a script to install the camera drivers following the instructions
+  in [azure_kinect_notes](https://github.com/juancarlosmiranda/azure_kinect_notes).
 
+## 2. Functionalities
 
-## Functionalities
-The functionalities of the software are briefly described.
+The functionalities of the software are briefly described. Supplementary material can be
+found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/USER_MANUAL_ak_sm_recorder_v1.md).
+
 * **[Show real time]** Display images of the device in real time. Used to see where the camera is pointing.
 * **[Start record]** Start a video recording.
 * **[Stop record]** Stops a video recording in progress.
@@ -27,32 +36,39 @@ The functionalities of the software are briefly described.
 * **[Save config]** Enables to the user to configure Azure Kinect devices parameters.
 * Videos and 3D cloud points can be retrieved from **"RECORDER_VIDEOS/"** folder.
 
+## 3. Install and run
 
-## Run AK_SM_RECORDER
-## Install
+* [Linux]
+  Enter to the folder **"ak_sm_recorder/"**
+
+Create virtual environment(only first time)
+
 ```
-python ak_sm_recorder_main.py
+./creating_env_ak_sm_recorder.sh
 ```
 
+Run script.
 
-### Windows (TODO)
-Copy folder FOLDER_HERE and execute "FILENAME_EXE.EXE".
+```
+./ak_sm_recorder_start.sh
+```
 
-### Linux (TODO)
-..
+* [Windows]
+  Enter to the folder "ak_sm_recorder/"
 
+Create virtual environment(only first time)
 
-## Package distribution format
-Explain about packages distribution. 
+```
+TODO_HERE
+```
 
-| Package type | Package |  Url |  Description | 
-|--------------|---------|------|------| 
-| Windows      | .EXE    | .EXE | Executables are stored under build/ | 
-| Linux        | .deb    | .deb | NOT IMPLEMENTED YET| 
-| PIP          | .whl    | .whl | PIP packages are stored in build/ | 
-| . | . | . |
+Run script from CMD.
+```
+./ak_sm_recorder_start.bat
+```
 
-## Files and folder description
+## 4.3 Files and folder description
+
 Folder description:
 
 | Folders                    | Description            |
@@ -61,7 +77,6 @@ Folder description:
 | src/ | Source code |
 | win_exe_conf/ | Specifications for building .exe files with Pyinstaller.|
 | . | . |
-  
 
 Files description:
 
@@ -72,25 +87,29 @@ Files description:
 | ak_sm_recorder_main.bat | Executing main script | WIN |
 | build_pip.bat | Build PIP package to distribution | WIN |
 | build_win.bat | Build .EXE for distribution | WIN |
+| creating_env_ak_sm_recorder.sh | Automatically creates Python environments | Linux |
+| ak_sm_recorder_start.sh | Executing main script | Linux |
 | /src/ak_sm_recorder/__main__.py | Main function used in package compilation | Supported by Python |
 | /ak_sm_recorder_main.py | Python main function | Supported by Python |
 | setup.cfg | Package configuration PIP| Supported by Python |
 | pyproject.toml | Package description pip| Supported by Python |
-| . | . | . |
 
+## 5. Development tools, environment, build executables
+Some development tools are needed with this package, listed below:
 
-## Development tools and environment
 * [Pyinstaller](https://pyinstaller.org).
 * [Opencv](https://opencv.org/).
 * [Curses for Python](https://docs.python.org/3/howto/curses.html) ```pip install windows-curses```.
+* [7zip](https://7ziphelp.com/).
 
+### 5.1 Notes for developers
 
-### Notes for developers
-You can use the __main__.py for execute as first time in src/ak_frame_extractor/_ _ main _ _.py
-Configure the path of the project, if you use Pycharm, put your folder root like this:
+You can use the __main__.py for execute as first time in src/ak_sm_recorder/_ _ main _ _.py Configure the path of
+the project, if you use Pycharm, put your folder root like this:
 ![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/img/configuration_pycharm.png?raw=true)
 
-### Creating virtual environment Linux (TODO)
+### 5.2 Creating virtual environment Linux
+
 ```
 python3 -m venv ./venv
 source ./venv/bin/activate
@@ -98,26 +117,70 @@ pip install --upgrade pip
 pip install -r requirements_linux.txt
 ```
 
-### Creating virtual environment  Windows (TODO)
+### 5.3 Creating virtual environment  Windows
+
 ```
 %userprofile%"\AppData\Local\Programs\Python\Python38\python.exe" -m venv ./venv
 venv\Scripts\activate.bat
 pip install --upgrade pip
-pip install -r requirements_win.txt
+pip install -r requirements_windows.txt
 ```
+
 ** If there are some problems in Windows, follow [this](https://github.com/etiennedub/pyk4a/) **
+
 ```
 pip install pyk4a --no-use-pep517 --global-option=build_ext --global-option="-IC:\Program Files\Azure Kinect SDK v1.4.1\sdk\include" --global-option="-LC:\Program Files\Azure Kinect SDK v1.4.1\sdk\windows-desktop\amd64\release\lib"
 ```
 
-### Running software
-TODO_ADD_HERE_TEXT
+## 5.4 Building PIP package
+
+We are working to offer Pypi support for this package. At this time this software can be built by scripts automatically.
+
+### 5.4.1 Build packages
+
+```
+py -m pip install --upgrade build
+build_pip.bat
+```
+
+### 5.4.2 Download PIP package
+
+```
+pip install package.whl
+```
+
+### 5.4.3 Run ak_sm_recorder
+
+```
+python -m ak_sm_recorder.py
+```
+
+## 5.4 Building .EXE for Windows 10
+
+```
+build_win.bat
+```
+
+After the execution of the script, a new folder will be generated inside the project **"/dist"**. You can copy **
+ak_sm_recorder_f/** or a compressed file **"ak_sm_recorder_f.zip"** to distribute.
+
+### 5.6 Package distribution format
+
+Explain about packages distribution.
+
+| Package type | Package |  Url |  Description | 
+|--------------|---------|------|------| 
+| Windows      | .EXE    | .EXE | Executables are stored under build/ | 
+| Linux        | .deb    | .deb | NOT IMPLEMENTED YET| 
+| PIP          | .whl    | .whl | PIP packages are stored in build/ |
 
 
 ## Authorship
+
 This project is contributed by [GRAP-UdL-AT](http://www.grap.udl.cat/en/index.html). Please contact authors to report
 bugs juancarlos.miranda@udl.cat
 
 ## Citation
+
 If you find this code useful, please consider citing:
 [GRAP-UdL-AT/ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/).
