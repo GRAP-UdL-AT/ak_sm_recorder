@@ -67,7 +67,7 @@ Run script from CMD.
 ./ak_sm_recorder_start.bat
 ```
 
-## 4.3 Files and folder description
+## 4. Files and folder description
 
 Folder description:
 
