@@ -47,7 +47,7 @@ python -m ak_sm_recorder
 ```
 
 
-### 3.1 Install and run virtual environments
+### 3.2 Install and run virtual environments
 * [Linux]
   Enter to the folder **"ak_sm_recorder/"**
 
@@ -95,7 +95,7 @@ Files description:
 | activate.bat | Activate environments in Windows | WIN |
 | clean_files.bat | Clean files under CMD. | WIN |
 | ak_sm_recorder_main.bat | Executing main script | WIN |
-| build_pip.bat | Build PIP package to distribution | WIN |
+| build_pip.bat | Build PIP package for distribution | WIN |
 | build_win.bat | Build .EXE for distribution | WIN |
 | creating_env_ak_sm_recorder.sh | Automatically creates Python environments | Linux |
 | ak_sm_recorder_start.sh | Executing main script | Linux |
@@ -116,7 +116,7 @@ Some development tools are needed with this package, listed below:
 
 You can use the __main__.py for execute as first time in src/ak_sm_recorder/_ _ main _ _.py Configure the path of
 the project, if you use Pycharm, put your folder root like this:
-![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/img/configuration_pycharm.png?raw=true)
+![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/configuration_pycharm.png?raw=true)
 
 ### 5.2 Creating virtual environment Linux
 
