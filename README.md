@@ -116,8 +116,11 @@ Some development tools are needed with this package, listed below:
 
 You can use the __main__.py for execute as first time in src/ak_sm_recorder/_ _ main _ _.py Configure the path of
 the project, if you use Pycharm, put your folder root like this:
+
 ![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/configuration_pycharm.png?raw=true)
 
+
+(docs/img/ak_sm_recorded_presentation.png)
 
 ### 5.2 Creating virtual environment Linux
 
