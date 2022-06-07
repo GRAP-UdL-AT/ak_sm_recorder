@@ -118,6 +118,7 @@ You can use the __main__.py for execute as first time in src/ak_sm_recorder/_ _ 
 the project, if you use Pycharm, put your folder root like this:
 ![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/configuration_pycharm.png?raw=true)
 
+
 ### 5.2 Creating virtual environment Linux
 
 ```
