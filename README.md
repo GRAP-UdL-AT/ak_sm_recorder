@@ -38,16 +38,20 @@ found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main
 
 ## 3. Install and run
 
-### 3.1 PIP install and run
+### 3.1 PIP quick install package
 Create your Python virtual environment.
 
 ```
+python3 -m venv ./ak-sm-recorder
+source ./ak-sm-recorder/bin/activate
+pip install --upgrade pip
+
 pip install ak-sm-recorder  
 python -m ak_sm_recorder
 ```
 
 
-### 3.2 Install and run virtual environments
+### 3.2 Install and run virtual environments using scripts provided
 * [Linux]
   Enter to the folder **"ak_sm_recorder/"**
 
