@@ -60,10 +60,18 @@ if __name__ == '__main__':
     if os.path.exists(path_user_config_files):
         print('Directory exist!!!', path_user_config_files)
     else:
-        print('Directory doesnt exist!!!', path_user_config_files)
+        print('Directory doesn\'t exist!!!', path_user_config_files)
         print('Creating directory ', path_user_config_files)
         os.mkdir(path_user_config_files)
         copy_folder(package_path_config_files, path_user_config_files)
+
+    # -------------------------
+    if os.path.exists(path_video_output):
+        print('Directory exist!!!', path_video_output)
+    else:
+        print('Directory doesn\'t exist!!!', path_video_output)
+        print('Creating directory ', path_video_output)
+        os.mkdir(path_video_output)
 
     # -------------------------
     gui_config_obj = GUIKASingleModeConfig(path_gui_conf_file)

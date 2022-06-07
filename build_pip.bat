@@ -34,4 +34,10 @@ ECHO %PATH_ASSETS_FILE%
 ECHO %DESTINATION_FOLDER_ABSOLUTE_ASSETS%
 
 ECHO 'pip package is OK -- /dist/ak_frame_extractor_package-0.0.1-py3-none-any.whl'
+rem -- INSTALL this modules to create PIP package
+rem py -m pip install --upgrade pip
+rem py -m pip install --upgrade build
+
+
+
 py -m build

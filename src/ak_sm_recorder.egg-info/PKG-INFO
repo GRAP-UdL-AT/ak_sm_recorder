@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: ak-sm-recorder
+Version: 1.0
+Summary: GUI tool developed in Python for Azure Kinect for standalone data capture.
+Home-page: https://github.com/GRAP-UdL-AT/ak_sm_recorder
+Author: Juan Carlos Miranda
+Author-email: juancarlos.miranda@udl.cat
+Project-URL: Bug Tracker, https://github.com/GRAP-UdL-AT/ak_sm_recorder/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # AK_SM_RECORDER
 
 A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode.
@@ -38,16 +53,6 @@ found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main
 
 ## 3. Install and run
 
-### 3.1 PIP install and run
-Create your Python virtual environment.
-
-```
-pip install ak-sm-recorder  
-python -m ak_sm_recorder
-```
-
-
-### 3.1 Install and run virtual environments
 * [Linux]
   Enter to the folder **"ak_sm_recorder/"**
 
@@ -156,7 +161,7 @@ build_pip.bat
 ### 5.4.2 Download PIP package
 
 ```
-pip install ak_sm_recorder-1.0-py3-none-any.whl
+pip install package.whl
 ```
 
 ### 5.4.3 Run ak_sm_recorder
