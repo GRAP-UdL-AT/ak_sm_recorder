@@ -10,7 +10,7 @@ A simple GUI recorder based on Python to manage Azure Kinect camera devices in a
 2. Functionalities.
 3. Install and run.
 4. Files and folder description.
-5. Development tools, environment, build executables.t
+5. Development tools, environment, build executables.
 
 ## 1. Pre-requisites
 
