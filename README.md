@@ -42,8 +42,8 @@ found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main
 Create your Python virtual environment.
 
 ```
-python3 -m venv ./ak-sm-recorder
-source ./ak-sm-recorder/bin/activate
+python3 -m venv ./ak_sm_recorder_venv
+source ./ak_sm_recorder_venv/bin/activate
 pip install --upgrade pip
 
 pip install ak-sm-recorder  
