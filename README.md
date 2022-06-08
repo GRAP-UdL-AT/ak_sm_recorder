@@ -1,7 +1,7 @@
 # AK_SM_RECORDER
 
 A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode. Visit the project site
-at ![https://pypi.org/project/ak-sm-recorder/](https://pypi.org/project/ak-sm-recorder/)
+at [https://pypi.org/project/ak-sm-recorder/](https://pypi.org/project/ak-sm-recorder/)
 
 ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorded_presentation.png?raw=true)
 
