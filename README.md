@@ -1,6 +1,7 @@
 # AK_SM_RECORDER
 
-A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode. ![Pypi package](https://pypi.org/project/ak-sm-recorder/)
+A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode. Visit the project site
+at ![https://pypi.org/project/ak-sm-recorder/](https://pypi.org/project/ak-sm-recorder/)
 
 ![SOFTWARE_PRESENTATION](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/ak_sm_recorded_presentation.png?raw=true)
 
@@ -25,8 +26,8 @@ A simple GUI recorder based on Python to manage Azure Kinect camera devices in a
 
 ## 2. Functionalities
 
-The functionalities of the software are briefly described. Supplementary material can be
-found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/USER_MANUAL_ak_sm_recorder_v1.md).
+The functionalities of the software are briefly described. Supplementary material can be found
+in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/USER_MANUAL_ak_sm_recorder_v1.md).
 
 * **[Show real time]** Display images of the device in real time. Used to see where the camera is pointing.
 * **[Start record]** Start a video recording.
@@ -39,6 +40,7 @@ found in [USER's Manual](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main
 ## 3. Install and run
 
 ### 3.1 PIP quick install package
+
 Create your Python virtual environment.
 
 ```
@@ -50,8 +52,8 @@ pip install ak-sm-recorder
 python -m ak_sm_recorder
 ```
 
-
 ### 3.2 Install and run virtual environments using scripts provided
+
 * [Linux]
   Enter to the folder **"ak_sm_recorder/"**
 
@@ -77,6 +79,7 @@ TODO_HERE
 ```
 
 Run script from CMD.
+
 ```
 ./ak_sm_recorder_start.bat
 ```
@@ -109,6 +112,7 @@ Files description:
 | pyproject.toml | Package description pip| Supported by Python |
 
 ## 5. Development tools, environment, build executables
+
 Some development tools are needed with this package, listed below:
 
 * [Pyinstaller](https://pyinstaller.org).
@@ -118,11 +122,10 @@ Some development tools are needed with this package, listed below:
 
 ### 5.1 Notes for developers
 
-You can use the __main__.py for execute as first time in src/ak_sm_recorder/_ _ main _ _.py Configure the path of
-the project, if you use Pycharm, put your folder root like this:
+You can use the __main__.py for execute as first time in src/ak_sm_recorder/_ _ main _ _.py Configure the path of the
+project, if you use Pycharm, put your folder root like this:
 
 ![ak_sm_recorder](https://github.com/GRAP-UdL-AT/ak_sm_recorder/blob/main/docs/img/configuration_pycharm.png?raw=true)
-
 
 (docs/img/ak_sm_recorded_presentation.png)
 
@@ -191,7 +194,6 @@ Explain about packages distribution.
 | Windows      | .EXE    | .EXE | Executables are stored under build/ | 
 | Linux        | .deb    | .deb | NOT IMPLEMENTED YET| 
 | PIP          | .whl    | .whl | PIP packages are stored in build/ |
-
 
 ## Authorship
 
