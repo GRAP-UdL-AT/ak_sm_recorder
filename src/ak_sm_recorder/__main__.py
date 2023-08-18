@@ -11,44 +11,55 @@ Description:
 Use:
     python __main__.py
 """
+import os
+import sys
+sys.path.append(os.path.join(os.path.abspath('.'), 'src'))
+from os.path import expanduser
 
-# import locale
-# import gettext
-# import os
-# import logging
-# import helpers.helper_load_config as hc
 from gui_single_mode.gui_ak_single_config import GUIKASingleModeConfig
 from gui_single_mode.gui_classes import GUIKASingleMode
-from os.path import expanduser
 from helpers.helper_filesystem import *
 
 if __name__ == '__main__':
-    # current_locale, encoding = locale.getdefaultlocale()
-    # LOCAL_PATH = os.path.dirname(os.path.abspath(__file__))
-    # locale_path = os.path.join(LOCAL_PATH, 'locale')
-    # language = gettext.translation('gui_classes', locale_path, ['en_US']) # todo: change gui_classes to gui_single_mode
-    # language.install()
-
-    BASE_DIR = os.path.abspath('.')
-    path_log_file = os.path.join(BASE_DIR, 'log', 'gui_ka_single_mode.log')
-    path_conf_file = os.path.join(BASE_DIR, 'conf', 'kinect_azure_settings.conf')
-    path_gui_conf_file = os.path.join(BASE_DIR, 'conf', 'gui_ka_single_mode.conf')
-    path_video_output = os.path.join(BASE_DIR, 'recorded_video')  # todo: correct this must be in default
     user_path = expanduser("~")
+    BASE_DIR = os.path.abspath('.')  # it gives the current location
 
     current_main_path_str = __file__
-    package_path = os.path.dirname(os.path.normpath(current_main_path_str))
+    package_path = os.path.join(os.path.dirname(os.path.normpath(current_main_path_str)), 'ak_sm_recorder')
+    # ------------
     package_path_config_files = os.path.join(package_path, 'conf')
-    path_user_config_files = os.path.join(BASE_DIR, 'conf')
+    package_path_log_files = os.path.join(package_path, 'log')
 
+    path_conf_file = os.path.join(package_path_config_files, 'kinect_azure_settings.conf')
+    ui_path_config_file = os.path.join(package_path_config_files, 'gui_ka_single_mode.conf')
+    path_log_file = os.path.join(package_path_log_files, 'gui_ka_single_mode.log')  # todo: check if this is used
+
+    # ------------
+    root_folder = os.path.join(BASE_DIR, 'ak_sm_recorder')  #
+    package_path_config_files = os.path.join(package_path, 'conf')
+    path_user_config_files = os.path.join(root_folder, 'conf')
+    path_user_output_folder = os.path.join(root_folder, 'recorded_video')
+
+    print(f'user_path -> {user_path}')
     print('BASE_DIR->', BASE_DIR)
-    print('user_path->', user_path)
-    print('saved_str', current_main_path_str)
+    print('current_main_path_str', current_main_path_str)
     print('package_path', package_path)
-    print('path_gui_conf_file->', path_gui_conf_file)
+    print('path_gui_conf_file->', ui_path_config_file)
+    print("package_path_config_files->", package_path_config_files)
     print('path_user_config_files->', path_user_config_files)
 
     # if directory doen't exist, then create
+    if os.path.exists(root_folder):
+        print('Directory exist!!!', root_folder)
+    else:
+        # creates hierarchy
+        print('CREATING ', root_folder)
+        print('CREATING ', path_user_config_files)
+        print('CREATING ', path_user_output_folder)
+        os.mkdir(root_folder)
+        os.mkdir(path_user_config_files)
+        os.mkdir(path_user_output_folder)
+
     if os.path.exists(path_user_config_files):
         print('Directory exist!!!', path_user_config_files)
     else:
@@ -58,17 +69,18 @@ if __name__ == '__main__':
         copy_folder(package_path_config_files, path_user_config_files)
 
     # -------------------------
-    if os.path.exists(path_video_output):
-        print('Directory exist!!!', path_video_output)
+    if os.path.exists(path_user_output_folder):
+        print('Directory exist!!!', path_user_output_folder)
     else:
-        print('Directory doesn\'t exist!!!', path_video_output)
-        print('Creating directory ', path_video_output)
-        os.mkdir(path_video_output)
+        print('Directory doesn\'t exist!!!', path_user_output_folder)
+        print('Creating directory ', path_user_output_folder)
+        os.mkdir(path_user_output_folder)
 
     # -------------------------
-    gui_config_obj = GUIKASingleModeConfig(path_gui_conf_file)
-    gui_config_obj.file_browser_input_folder = path_video_output
+    gui_config_obj = GUIKASingleModeConfig(ui_path_config_file)
+    gui_config_obj.file_browser_input_folder = path_user_output_folder
     gui_config_obj.path_conf_file = path_conf_file
+    # -------------------------
     app = GUIKASingleMode(gui_config_obj)
     app.mainloop()
     # -------------------------

@@ -48,6 +48,12 @@ python3 -m venv ./ak_sm_recorder_venv
 source ./ak_sm_recorder_venv/bin/activate
 pip install --upgrade pip
 
+# on Windows systems
+.\ak_frame_extractor_venv\Scripts\activate
+python.exe -m pip install --upgrade pip
+
+
+
 pip install ak-sm-recorder  
 python -m ak_sm_recorder
 ```

@@ -22,7 +22,7 @@ import configparser
 
 
 class GUIKASingleModeConfig:
-    app_title = 'AK SM Recorder v1.0'
+    app_title = 'AK SM Recorder v1.2.1'
     width = 320
     height = 480
     geometry_about = '300x480'

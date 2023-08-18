@@ -23,7 +23,7 @@ import tkinter as tk
 
 class AboutWindow2(tk.Toplevel):
     title_str = 'AK SM Recorder'
-    version_number_str = '1.0'
+    version_number_str = '1.2.1'
 
     def __init__(self, parent):
         super().__init__(parent)

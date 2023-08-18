@@ -10,6 +10,8 @@ REM  Author: Juan Carlos Miranda. https://github.com/juancarlosmiranda
 SET APPLICATION_FOLDER_MAIN=ak_sm_recorder
 SET APPLICATION_FOLDER_OUT=ak_sm_recorder_f
 SET APPLICATION_PATH=%~dp0
+SET DIST_FOLDER=dist
+SET VERSION=1.2.1
 
 SET CONF_NAME=*.conf
 SET PAHT_FOLDER_RELATIVE_CONF=src\%APPLICATION_FOLDER_MAIN%\conf\
@@ -38,6 +40,8 @@ rem -- INSTALL this modules to create PIP package
 rem py -m pip install --upgrade pip
 rem py -m pip install --upgrade build
 
-
-
 py -m build
+
+ECHO 'pip package is OK -- '/%DIST_FOLDER%/ak_frame_extractor_package-%VERSION%'-py3-none-any.whl
+ECHO 'UPLOAD FOR TEST PACKAGE USING - twine upload --repository testpypi ./dist/*'
+ECHO 'UPLOAD FINAL PACKAGE USING - twine upload ./dist/* --verbose'
