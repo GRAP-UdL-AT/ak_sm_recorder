@@ -1,4 +1,4 @@
-# AK_SM_RECORDER - Azure Kinect SM Recorder
+# AKFruitData: AK_SM_RECORDER - Azure Kinect SM Recorder
 
 A simple GUI recorder based on Python to manage Azure Kinect camera devices in a standalone mode. Visit the project site
 at [https://pypi.org/project/ak-sm-recorder/](https://pypi.org/project/ak-sm-recorder/)
