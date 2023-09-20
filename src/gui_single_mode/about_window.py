@@ -32,7 +32,7 @@ class AboutWindow2(tk.Toplevel):
         self.resizable(width=False, height=False)  # do not change the size
         self.attributes('-topmost', True)
         assets_path = os.path.dirname(os.path.abspath(__file__))
-        img_path = os.path.join(assets_path, 'assets', 'icon_app.png')
+        img_path = os.path.join(assets_path, 'assets', 'ak_sm_recorder_32.png')
         self.iconphoto(False, tk.PhotoImage(file=img_path))
         # ---------------------------
 
